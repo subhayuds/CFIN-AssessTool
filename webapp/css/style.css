@@ -1,0 +1,64 @@
+/*** Report Home Page Style - START ***/
+.pageBackground {
+	background-image: url("../mime/Background.png");	
+}
+
+.boxSection {
+	margin-top: 5%;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: WHITE;
+}
+/*** Report Home Page Style - END ***/
+
+/*** Report Details Page Style - START ***/
+.customPage > section {
+	padding-top: 0px !important;
+}
+
+.customPage > header > div > div:nth-child(2) > div {
+	justify-content: center;
+}
+
+.customPage > header > div > div:nth-child(2) > div > h2 > span {
+	font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.customFilterWrap > div:nth-child(1) > div:nth-child(1) > .sapMITBFilter > div > div:nth-child(1) {
+	width: 100%;
+}
+
+.customFilterText > div:nth-child(1) > div:nth-child(1) > .sapMITBFilter > div > div:nth-child(2) {
+	width: 150px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.customFilterWrapLevel2 > div:nth-child(1) > div:nth-child(1) {
+	text-align: center;
+}
+
+.customFilterWrapLevel2 > div:nth-child(1) > div:nth-child(1) > .sapMITBFilter > div > div:nth-child(1) {
+	width: 100%;
+	text-align: center;
+}
+
+.customFilterTextLevel2 > div:nth-child(1) > div:nth-child(1) > .sapMITBFilter > div > div:nth-child(2) {
+	width: 150px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.footerText {
+	font-size: 14px;
+    font-style: italic;
+    padding-right: 1px;
+}
+
+.footerLogo {
+	margin-top: 4px;
+    margin-left: 3px;
+}
+/*** Report Details Page Style - END ***/
