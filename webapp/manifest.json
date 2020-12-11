@@ -117,6 +117,174 @@
 					"target": [
 						"TargetOverviewReportStructure"
 					]
+				},
+				{
+					"name": "ExSummary",
+					"pattern": "ExSummary/load:?navLoc:",
+					"target": [
+						"TargetExSummary"
+					]
+				},
+				{
+					"name": "ExSummaryCFINConnections",
+					"pattern": "ExSummaryCFINConnections/load:?navLoc:",
+					"target": [
+						"TargetExSummaryCFINConnections"
+					]
+				},
+				{
+					"name": "SourceSystem",
+					"pattern": "SourceSystem/load:?navLoc:",
+					"target": [
+						"TargetSourceSystem"
+					]
+				},
+				{
+					"name": "SourceSystemFindings",
+					"pattern": "SourceSystemFindings/load:?navLoc:",
+					"target": [
+						"TargetSourceSystemFindings"
+					]
+				},
+				{
+					"name": "SourceSystemRecommendation",
+					"pattern": "SourceSystemRecommendation/load:?navLoc:",
+					"target": [
+						"TargetSourceSystemRecommendation"
+					]
+				},
+				{
+					"name": "SLT",
+					"pattern": "SLT/load:?navLoc:",
+					"target": [
+						"TargetSLT"
+					]
+				},
+				{
+					"name": "SLTFindings",
+					"pattern": "SLTFindings/load:?navLoc:",
+					"target": [
+						"TargetSLTFindings"
+					]
+				},
+				{
+					"name": "SLTRecommendation",
+					"pattern": "SLTRecommendation/load:?navLoc:",
+					"target": [
+						"TargetSLTRecommendation"
+					]
+				},
+				{
+					"name": "TargetSystem",
+					"pattern": "TargetSystem/load:?navLoc:",
+					"target": [
+						"TargetTargetSystem"
+					]
+				},
+				{
+					"name": "TargetSystemFindings",
+					"pattern": "TargetSystemFindings/load:?navLoc:",
+					"target": [
+						"TargetTargetSystemFindings"
+					]
+				},
+				{
+					"name": "TargetSystemRecommendation",
+					"pattern": "TargetSystemRecommendation/load:?navLoc:",
+					"target": [
+						"TargetTargetSystemRecommendation"
+					]
+				},
+				{
+					"name": "AIF",
+					"pattern": "AIF/load:?navLoc:",
+					"target": [
+						"TargetAIF"
+					]
+				},
+				{
+					"name": "AIFFindings",
+					"pattern": "AIFFindings/load:?navLoc:",
+					"target": [
+						"TargetAIFFindings"
+					]
+				},
+				{
+					"name": "AIFRecommendation",
+					"pattern": "AIFRecommendation/load:?navLoc:",
+					"target": [
+						"TargetAIFRecommendation"
+					]
+				},
+				{
+					"name": "MDG",
+					"pattern": "MDG/load:?navLoc:",
+					"target": [
+						"TargetMDG"
+					]
+				},
+				{
+					"name": "MDGFindings",
+					"pattern": "MDGFindings/load:?navLoc:",
+					"target": [
+						"TargetMDGFindings"
+					]
+				},
+				{
+					"name": "MDGRecommendation",
+					"pattern": "MDGRecommendation/load:?navLoc:",
+					"target": [
+						"TargetMDGRecommendation"
+					]
+				},
+				{
+					"name": "NonSAP",
+					"pattern": "NonSAP/load:?navLoc:",
+					"target": [
+						"TargetNonSAP"
+					]
+				},
+				{
+					"name": "NonSAPFindings",
+					"pattern": "NonSAPFindings/load:?navLoc:",
+					"target": [
+						"TargetNonSAPFindings"
+					]
+				},
+				{
+					"name": "NonSAPRecommendation",
+					"pattern": "NonSAPRecommendation/load:?navLoc:",
+					"target": [
+						"TargetNonSAPRecommendation"
+					]
+				},
+				{
+					"name": "WhatsNext",
+					"pattern": "WhatsNext/load:?navLoc:",
+					"target": [
+						"TargetWhatsNext"
+					]
+				},
+				{
+					"name": "WhatsNextOverview",
+					"pattern": "WhatsNextOverview/load:?navLoc:",
+					"target": [
+						"TargetWhatsNextOverview"
+					]
+				},
+				{
+					"name": "WhatsNextRoadmap",
+					"pattern": "WhatsNextRoadmap/load:?navLoc:",
+					"target": [
+						"TargetWhatsNextRoadmap"
+					]
+				},
+				{
+					"name": "WhatsNextPropositions",
+					"pattern": "WhatsNextPropositions/load:?navLoc:",
+					"target": [
+						"TargetWhatsNextPropositions"
+					]
 				}
 			],
 			"targets": {
@@ -168,37 +336,221 @@
 					"controlId": "iconTabOverviewReportStructure",
 					"controlAggregation": "content"
 				},
-				"ExSummary": {
-					"viewType": "XML",
-					"viewName": "ExSummary"
+				"TargetExSummary": {
+					"viewLevel": 2,
+					"viewId": "ExSummary",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "ExSummary",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
 				},
-				"SourceSystem": {
+				"TargetExSummaryCFINConnections": {
+					"viewLevel": 3,
+					"parent": "TargetExSummary",
+					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewType": "XML",
-					"viewName": "SourceSystem"
+					"viewName": "ExSummaryCFINConnections",
+					"controlId": "iconTabExSummaryCFINConnections",
+					"controlAggregation": "content"
 				},
-				"SLT": {
-					"viewType": "XML",
-					"viewName": "SLT"
+				"TargetSourceSystem": {
+					"viewLevel": 2,
+					"viewId": "SourceSystem",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "SourceSystem",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
 				},
-				"TargetSystem": {
+				"TargetSourceSystemFindings": {
+					"viewLevel": 3,
+					"parent": "TargetSourceSystem",
+					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewType": "XML",
-					"viewName": "TargetSystem"
+					"viewName": "SourceSystemFindings",
+					"controlId": "iconTabSourceSystemFindings",
+					"controlAggregation": "content"
 				},
-				"AIF": {
+				"TargetSourceSystemRecommendation": {
+					"viewLevel": 3,
+					"parent": "TargetSourceSystem",
+					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewType": "XML",
-					"viewName": "AIF"
+					"viewName": "SourceSystemRecommendation",
+					"controlId": "iconTabSourceSystemRecommendation",
+					"controlAggregation": "content"
 				},
-				"MDG": {
-					"viewType": "XML",
-					"viewName": "MDG"
+				"TargetSLT": {
+					"viewLevel": 2,
+					"viewId": "SLT",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "SLT",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
 				},
-				"NonSAP": {
+				"TargetSLTFindings": {
+					"viewLevel": 3,
+					"parent": "TargetSLT",
+					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewType": "XML",
-					"viewName": "NonSAP"
+					"viewName": "SLTFindings",
+					"controlId": "iconTabSLTFindings",
+					"controlAggregation": "content"
 				},
-				"WhatsNext": {
+				"TargetSLTRecommendation": {
+					"viewLevel": 3,
+					"parent": "TargetSLT",
+					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewType": "XML",
-					"viewName": "WhatsNext"
+					"viewName": "SLTRecommendation",
+					"controlId": "iconTabSLTRecommendation",
+					"controlAggregation": "content"
+				},
+				"TargetTargetSystem": {
+					"viewLevel": 2,
+					"viewId": "TargetSystem",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "TargetSystem",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
+				},
+				"TargetTargetSystemFindings": {
+					"viewLevel": 3,
+					"parent": "TargetTargetSystem",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "TargetSystemFindings",
+					"controlId": "iconTabTargetSystemFindings",
+					"controlAggregation": "content"
+				},
+				"TargetTargetSystemRecommendation": {
+					"viewLevel": 3,
+					"parent": "TargetTargetSystem",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "TargetSystemRecommendation",
+					"controlId": "iconTabTargetSystemRecommendation",
+					"controlAggregation": "content"
+				},
+				"TargetAIF": {
+					"viewLevel": 2,
+					"viewId": "AIF",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "AIF",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
+				},
+				"TargetAIFFindings": {
+					"viewLevel": 3,
+					"parent": "TargetAIF",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "AIFFindings",
+					"controlId": "iconTabAIFFindings",
+					"controlAggregation": "content"
+				},
+				"TargetAIFRecommendation": {
+					"viewLevel": 3,
+					"parent": "TargetAIF",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "AIFRecommendation",
+					"controlId": "iconTabAIFRecommendation",
+					"controlAggregation": "content"
+				},
+				"TargetMDG": {
+					"viewLevel": 2,
+					"viewId": "MDG",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "MDG",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
+				},
+				"TargetMDGFindings": {
+					"viewLevel": 3,
+					"parent": "TargetMDG",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "MDGFindings",
+					"controlId": "iconTabMDGFindings",
+					"controlAggregation": "content"
+				},
+				"TargetMDGRecommendation": {
+					"viewLevel": 3,
+					"parent": "TargetMDG",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "MDGRecommendation",
+					"controlId": "iconTabMDGRecommendation",
+					"controlAggregation": "content"
+				},
+				"TargetNonSAP": {
+					"viewLevel": 2,
+					"viewId": "NonSAP",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "NonSAP",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
+				},
+				"TargetNonSAPFindings": {
+					"viewLevel": 3,
+					"parent": "TargetNonSAP",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "NonSAPFindings",
+					"controlId": "iconTabNonSAPFindings",
+					"controlAggregation": "content"
+				},
+				"TargetNonSAPRecommendation": {
+					"viewLevel": 3,
+					"parent": "TargetNonSAP",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "NonSAPRecommendation",
+					"controlId": "iconTabNonSAPRecommendation",
+					"controlAggregation": "content"
+				},
+				"TargetWhatsNext": {
+					"viewLevel": 2,
+					"viewId": "WhatsNext",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "WhatsNext",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
+				},
+				"TargetWhatsNextOverview": {
+					"viewLevel": 3,
+					"parent": "TargetWhatsNext",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "WhatsNewOverview",
+					"controlId": "iconTabWhatsNextOverview",
+					"controlAggregation": "content"
+				},
+				"TargetWhatsNextRoadmap": {
+					"viewLevel": 3,
+					"parent": "TargetWhatsNext",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "WhatsNewRoadmap",
+					"controlId": "iconTabWhatsNextRoadmap",
+					"controlAggregation": "content"
+				},
+				"TargetWhatsNextPropositions": {
+					"viewLevel": 3,
+					"parent": "TargetWhatsNext",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewType": "XML",
+					"viewName": "WhatsNewPropositions",
+					"controlId": "iconTabWhatsNextPropositions",
+					"controlAggregation": "content"
 				}
 			}
 		}

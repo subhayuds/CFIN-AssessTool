@@ -1,10 +1,15 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hcl.CFIN-Report.controller.MDG"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Title">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+	<IconTabBar
+		id="iconTabBarMDG"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding customFilterWrapLevel2 customFilterTextLevel2">
+		<items>
+			<IconTabSeparator icon=""/>
+			<IconTabFilter id="iconTabMDGFindings" text="Introduction" key="intro"/>
+			<IconTabSeparator icon=""/>
+			<IconTabFilter id="iconTabMDGRecommendation" text="Recommendation" key="recommendation"/>
+			<IconTabSeparator icon=""/>
+		</items>
+	</IconTabBar>
 </mvc:View>

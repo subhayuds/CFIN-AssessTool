@@ -7,13 +7,9 @@
 			<IconTabSeparator icon=""/>
 			<IconTabFilter id="iconTabOverviewIntro" text="Introduction" key="intro"/>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabOverviewWhatsNew" text="New In Relese 1909" key="whatsNew">
-				<Text text="New In Relese 1909 content go here ..." />
-			</IconTabFilter>
+			<IconTabFilter id="iconTabOverviewWhatsNew" text="New In Relese 1909" key="whatsNew"/>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabOverviewReportStructure" text="Reprt Structure" key="reportStructure">
-				<Text text="Reprt Structure content go here ..." />
-			</IconTabFilter>
+			<IconTabFilter id="iconTabOverviewReportStructure" text="Reprt Structure" key="reportStructure"/>
 			<IconTabSeparator icon=""/>
 		</items>
 	</IconTabBar>
