@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"com/hcl/CFIN-Report/controller/BaseController"
+], function (BaseController) {
 	"use strict";
 
-	return Controller.extend("com.hcl.CFIN-Report.controller.ReportDetails", {
+	return BaseController.extend("com.hcl.CFIN-Report.controller.ReportDetails", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -11,7 +11,12 @@ sap.ui.define([
 		 * @memberOf com.hcl.CFIN-Report.view.ReportDetails
 		 */
 		onInit: function () {
-
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.getRoute("ReportDetails").attachMatched(this._onRouteMatched, this);
+			
+			if(!this._oRouter) {
+				this._oRouter = oRouter;
+			}
 		},
 
 		/**
@@ -39,7 +44,93 @@ sap.ui.define([
 		//	onExit: function() {
 		//
 		//	}
-
+		
+		_onRouteMatched : function (oEvent) {
+			var oArgs = oEvent.getParameter("arguments");
+			var navLocation = oArgs["?navLoc"];
+			var tabLevelOneKey = navLocation.tabLevelOne;
+			var tabLevelTwoKey = navLocation.tabLevelTwo;
+			
+			BaseController._navigateToReportLocation(tabLevelOneKey, tabLevelTwoKey);
+		},
+		
+		onSelectLevelOneTab: function(oEvent) {
+			var selectedTabKey = oEvent.getSource().getSelectedKey();
+			switch(selectedTabKey) {
+				case "overview":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+				case "exSummary":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+				case "sourceSystem":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+				case "slt":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+				case "targetSystem":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+				case "aif":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+				case "mdg":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+				case "external":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+				case "whatNext":
+					this._oRouter.navTo("OverviewIntro",{
+						"?navLoc": {
+							tabLevelOne: selectedTabKey,
+							tabLevelTwo: "intro"
+						}
+					}, true);
+					break;
+			}
+		}
 	});
 
 });

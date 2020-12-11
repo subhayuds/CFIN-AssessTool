@@ -89,6 +89,34 @@
 					"target": [
 						"TargetReportDetails"
 					]
+				},
+				{
+					"name": "Overview",
+					"pattern": "Overview/load:?navLoc:",
+					"target": [
+						"TargetOverview"
+					]
+				},
+				{
+					"name": "OverviewIntro",
+					"pattern": "OverviewIntro/load:?navLoc:",
+					"target": [
+						"TargetOverviewIntro"
+					]
+				},
+				{
+					"name": "OverviewWhatsNew",
+					"pattern": "OverviewWhatsNew/load:?navLoc:",
+					"target": [
+						"TargetOverviewWhatsNew"
+					]
+				},
+				{
+					"name": "OverviewReportStructure",
+					"pattern": "OverviewReportStructure/load:?navLoc:",
+					"target": [
+						"TargetOverviewReportStructure"
+					]
 				}
 			],
 			"targets": {
@@ -100,11 +128,77 @@
 					"viewName": "ReportHomePage"
 				},
 				"TargetReportDetails": {
+					"viewLevel": 1,
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
 					"viewId": "ReportDetails",
 					"viewName": "ReportDetails"
+				},
+				"TargetOverview": {
+					"viewLevel": 2,
+					"viewId": "Overview",
+					"parent": "TargetReportDetails",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "Overview",
+					"controlId": "iconTabOverview",
+					"controlAggregation": "content"
+				},
+				"TargetOverviewIntro": {
+					"viewLevel": 3,
+					"parent": "TargetOverview",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "OverviewIntro",
+					"controlId": "iconTabOverviewIntro",
+					"controlAggregation": "content"
+				},
+				"TargetOverviewWhatsNew": {
+					"viewLevel": 3,
+					"parent": "TargetOverview",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "OverviewIntro",
+					"controlId": "iconTabOverviewWhatsNew",
+					"controlAggregation": "content"
+				},
+				"TargetOverviewReportStructure": {
+					"viewLevel": 3,
+					"parent": "TargetOverview",
+					"viewPath": "com.hcl.CFIN-Report.view",
+					"viewName": "OverviewIntro",
+					"controlId": "iconTabOverviewReportStructure",
+					"controlAggregation": "content"
+				},
+				"ExSummary": {
+					"viewType": "XML",
+					"viewName": "ExSummary"
+				},
+				"SourceSystem": {
+					"viewType": "XML",
+					"viewName": "SourceSystem"
+				},
+				"SLT": {
+					"viewType": "XML",
+					"viewName": "SLT"
+				},
+				"TargetSystem": {
+					"viewType": "XML",
+					"viewName": "TargetSystem"
+				},
+				"AIF": {
+					"viewType": "XML",
+					"viewName": "AIF"
+				},
+				"MDG": {
+					"viewType": "XML",
+					"viewName": "MDG"
+				},
+				"NonSAP": {
+					"viewType": "XML",
+					"viewName": "NonSAP"
+				},
+				"WhatsNext": {
+					"viewType": "XML",
+					"viewName": "WhatsNext"
 				}
 			}
 		}

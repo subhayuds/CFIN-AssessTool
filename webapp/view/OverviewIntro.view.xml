@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hcl.CFIN-Report.controller.OverviewIntro" xmlns:html="http://www.w3.org/1999/xhtml">
+	<VBox class="sapUiSmallMarginTop sapUiSmallMarginBottom">
+		<Text
+			wrappingType="Hyphenated"
+			text="This report will help you to receive:"/>
+		<Text
+			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
+			text="1) Insights on your current SAP landscape and industry trends"/>
+		<Text
+			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
+			text="2) Relevant SAP S/4HANA 1909 business scenarios by line of business"/>
+		<Text
+			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
+			text="3) Tailored guidance and recommendations to realize the value from SAP S/4HANA"/>
+		<Text
+			wrappingType="Hyphenated" class="sapUiMediumMarginTop"
+			text="What we know about XXXXX (Client  Name):"/>
+		<Text
+			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
+			text="1) We analyzed business process performance and usage data provided from your SAP ERP, Non SAP, SLT and Central Finance system"/> 
+		<Text
+			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
+			text="2) XXXX no of central finance Functionalities enabled in the system in order to get data replicated"/>
+	</VBox>
+</mvc:View>

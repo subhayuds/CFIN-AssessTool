@@ -4,53 +4,9 @@
 			<Image src="mime/Fonterra.png" height="40px"/>
 		</headerContent>
 		<content>
-			<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding customFilterWrap customFilterText" 
-				headerBackgroundDesign="Transparent" backgroundDesign="Translucent">
+			<IconTabBar id="iconTabBarDetails" expanded="{device>/isNoPhone}" select="onSelectLevelOneTab" class="sapUiResponsiveContentPadding customFilterWrap customFilterText" headerBackgroundDesign="Transparent" backgroundDesign="Translucent">
 				<items>
-					<IconTabFilter icon="sap-icon://overview-chart" text="Overview" key="overview">
-						<IconTabBar
-							id="idIconTabBarNoIcons1"
-							expanded="{device>/isNoPhone}"
-							class="sapUiResponsiveContentPadding customFilterWrapLevel2 customFilterTextLevel2">
-							<items>
-								<IconTabSeparator icon=""/>
-								<IconTabFilter text="Introduction" key="intro">
-									<VBox class="sapUiSmallMarginTop sapUiSmallMarginBottom">
-										<Text
-											wrappingType="Hyphenated"
-											text="This report will help you to receive:"/>
-										<Text
-											wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-											text="1) Insights on your current SAP landscape and industry trends"/>
-										<Text
-											wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-											text="2) Relevant SAP S/4HANA 1909 business scenarios by line of business"/>
-										<Text
-											wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-											text="3) Tailored guidance and recommendations to realize the value from SAP S/4HANA"/>
-										<Text
-											wrappingType="Hyphenated" class="sapUiMediumMarginTop"
-											text="What we know about XXXXX (Client  Name):"/>
-										<Text
-											wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-											text="1) We analyzed business process performance and usage data provided from your SAP ERP, Non SAP, SLT and Central Finance system"/> 
-										<Text
-											wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-											text="2) XXXX no of central finance Functionalities enabled in the system in order to get data replicated"/>
-									</VBox>
-								</IconTabFilter>
-								<IconTabSeparator icon=""/>
-								<IconTabFilter text="New In Relese 1909" key="new1909">
-									<Text text="New In Relese 1909 content go here ..." />
-								</IconTabFilter>
-								<IconTabSeparator icon=""/>
-								<IconTabFilter text="Reprt Structure" key="reportStructure">
-									<Text text="Reprt Structure content go here ..." />
-								</IconTabFilter>
-								<IconTabSeparator icon=""/>
-							</items>
-						</IconTabBar>
-					</IconTabFilter>
+					<IconTabFilter id="iconTabOverview" icon="sap-icon://overview-chart" text="Overview" key="overview"/>
 					<IconTabSeparator icon="sap-icon://step" />
 					<IconTabFilter icon="sap-icon://along-stacked-chart" text="Executive Summary" key="exSummary">
 						<Text text="Executive Summary content go here ..." />
@@ -65,6 +21,22 @@
 					</IconTabFilter>
 					<IconTabSeparator icon="sap-icon://step" />
 					<IconTabFilter icon="sap-icon://goal" text="Target System" key="targetSystem">
+						<Text text="Target System content goes here ..." />
+					</IconTabFilter>
+					<IconTabSeparator icon="sap-icon://step" />
+					<IconTabFilter icon="sap-icon://it-system" text="AIF" key="aif">
+						<Text text="Target System content goes here ..." />
+					</IconTabFilter>
+					<IconTabSeparator icon="sap-icon://step" />
+					<IconTabFilter icon="sap-icon://master-task-triangle-2" text="MDG" key="mdg">
+						<Text text="Target System content goes here ..." />
+					</IconTabFilter>
+					<IconTabSeparator icon="sap-icon://step" />
+					<IconTabFilter icon="sap-icon://outbox" text="Non-SAP / External Interface" key="external">
+						<Text text="Target System content goes here ..." />
+					</IconTabFilter>
+					<IconTabSeparator icon="sap-icon://step" />
+					<IconTabFilter icon="sap-icon://sys-find-next" text="What's Next" key="whatNext">
 						<Text text="Target System content goes here ..." />
 					</IconTabFilter>
 				</items>
