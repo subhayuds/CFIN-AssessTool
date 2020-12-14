@@ -62,3 +62,47 @@
     margin-left: 3px;
 }
 /*** Report Details Page Style - END ***/
+
+/*** Mriganka Style - START ***/
+.bldStl{
+	font-weight: bold;
+}
+.bulletlist {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 20px;
+}
+
+.vborder {
+	border: 0px solid black;
+}
+
+.blBox{
+	height: 80px;
+	width: 400px;
+}
+
+.grBox{
+	height: 80px;
+	width: 300px;
+}
+
+.orBox{
+	height: 80px;
+	width: 200px;
+}
+
+.btnMrgn{
+	margin: 2px;
+}
+
+.bldStlBl{
+	font-weight: bold;
+	color: blue;
+}
+
+.imgCnt{
+	width: 1rem !important;
+}
+/*** Mriganka Style - START ***/

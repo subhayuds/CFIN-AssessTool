@@ -1,0 +1,81 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid" 
+	xmlns:l="sap.ui.layout" xmlns:f="sap.f" xmlns:cards="sap.f.cards"
+	controllerName="com.hcl.CFIN-Report.controller.OverviewNewInRelease" xmlns:html="http://www.w3.org/1999/xhtml">
+	<grid:CSSGrid gridTemplateColumns="1fr 1fr 1fr" gridTemplateRows="100px 100px 100px" gridGap="1rem">
+		<f:Card>
+			<f:layoutData>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="4"/>
+			</f:layoutData>
+			<f:content>
+				<l:VerticalLayout class="sapUiSmallMargin sapUiTinyMarginEnd">
+					<VBox alignItems="Center">
+						<Image src="mime/img1.JPG"/>
+						<Text text="Manufacturing:" class="sapUiTinyMarginBottom bldStl"/>
+						<Text text="New Predictive Material and Resource Planning " class="sapUiTinyMarginBottom bldStl"/>
+					</VBox>
+					<VBox>
+						<List>
+							<items>
+								<StandardListItem wrapping="true"
+									title=" &#8226; Reduces inventory carrying costs by forecasting component demand with predictive material and resource planning"/>
+								<StandardListItem wrapping="true"
+									title="&#8226; Supports interactive planning with simulations, considers top-level demands (e.g. product forecast), derives component and capacity demands"/>
+								<StandardListItem wrapping="true" title="&#8226; Lower inventory due to appropriately sized buffers"/>
+							</items>
+						</List>
+					</VBox>
+				</l:VerticalLayout>
+			</f:content>
+		</f:Card>
+		<f:Card>
+			<f:layoutData>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="4"/>
+			</f:layoutData>
+			<f:content>
+				<l:VerticalLayout class="sapUiSmallMargin sapUiTinyMarginEnd">
+					<VBox alignItems="Center">
+						<Image src="mime/img2.JPG"/>
+						<Text text="Sourcing and Procurement:" class="sapUiTinyMarginBottom bldStl"/>
+						<Text text="Delivery Time Prediction " class="sapUiTinyMarginBottom bldStl"/>
+					</VBox>
+					<VBox>
+						<List>
+							<items>
+								<StandardListItem wrapping="true"
+									title=" &#8226; Predicts delivery dates of raw materials and classifies the shipments into different categories"/>
+								<StandardListItem wrapping="true"
+									title="&#8226; Enables you to react to potential material shortages proactively and to avoid production rescheduling"/>
+								<StandardListItem wrapping="true"
+									title="&#8226; With machine learning, driving up planning and delivery reliability, while decreasing manual monitoring effort"/>
+							</items>
+						</List>
+					</VBox>
+				</l:VerticalLayout>
+			</f:content>
+		</f:Card>
+		<f:Card>
+			<f:layoutData>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="4"/>
+			</f:layoutData>
+			<f:content>
+				<l:VerticalLayout class="sapUiSmallMargin sapUiTinyMarginEnd">
+					<VBox alignItems="Center">
+						<Image src="mime/img3.JPG"/>
+						<Text text="Finance:" class="sapUiTinyMarginBottom bldStl"/>
+						<Text text="Intercompany Reconciliation and Matrix Consolidation in Group Reporting " class="sapUiTinyMarginBottom bldStl"/>
+					</VBox>
+					<VBox>
+						<List>
+							<items>
+								<StandardListItem wrapping="true"
+									title=" &#8226; Consolidated finance reporting using new matrix consolidation enables simplified consolidation capabilities"/>
+								<StandardListItem wrapping="true"
+									title="&#8226; Evaluates consolidation perspectives individually or combined in matrix reports, and provides enhanced analysis of group consolidations"/>
+							</items>
+						</List>
+					</VBox>
+				</l:VerticalLayout>
+			</f:content>
+		</f:Card>
+	</grid:CSSGrid>
+</mvc:View>

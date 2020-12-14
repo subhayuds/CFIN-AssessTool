@@ -2,15 +2,15 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<IconTabBar
 		id="iconTabBarWhatsNew"
-		expanded="{device>/isNoPhone}"
+		expanded="true" expandable="false"
 		class="sapUiResponsiveContentPadding customFilterWrapLevel2 customFilterTextLevel2">
 		<items>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabWhatsNextOverview" text="Overview" key="overview"/>
+			<IconTabFilter id="iconTabWhatsNextOverview" text="Overview" key="WhatsNextOverview"/>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabWhatsNextRoadmap" text="Roadmap" key="roadmap"/>
+			<IconTabFilter id="iconTabWhatsNextRoadmap" text="Roadmap" key="WhatsNextRoadmap"/>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabWhatsNextPropositions" text="Propositions" key="propositions"/>
+			<IconTabFilter id="iconTabWhatsNextPropositions" text="Propositions" key="WhatsNextPropositions"/>
 			<IconTabSeparator icon=""/>
 		</items>
 	</IconTabBar>

@@ -1,10 +1,45 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid" xmlns:l="sap.ui.layout"
 	controllerName="com.hcl.CFIN-Report.controller.ExSummaryCFINConnections" xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Title">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+	<HBox width="100%" height="100%">
+		<VBox width="15%" height="100%" class="vborder" alignContent="Center" alignItems="Center">
+			<l:HorizontalLayout class="sapUiTinyMargin" allowWrapping="true">
+				<Text
+					text="HCL SAP CFIN Upgrade Assessment tool helps you to achieve your business goals. This report provides you insights and tailored SAP S/4HANA CFIN upgrade recommendations. Click one of these tiles on the right to discover how you can benefit from using HCL CFIN upgrade Assessment tool. "/>
+			</l:HorizontalLayout>
+		</VBox>
+		<VBox class="vborder" width="85%" height="100%">
+			<l:HorizontalLayout allowWrapping="true">
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Source System" subheader="">
+					<TileContent>
+						<ImageContent src="sap-icon://accounting-document-verification"/>
+					</TileContent>
+				</GenericTile>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Target S/4HANA CFIN System " subheader="" press="press">
+					<TileContent >
+						<ImageContent src="sap-icon://accounting-document-verification"/>
+					</TileContent>
+				</GenericTile>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="SLT System" subheader="">
+					<TileContent>
+						<ImageContent src="sap-icon://accounting-document-verification"/>
+					</TileContent>
+				</GenericTile>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="S/4HANA Finance" subheader="" press="press">
+					<TileContent >
+						<ImageContent src="sap-icon://accounting-document-verification"/>
+					</TileContent>
+				</GenericTile>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Non-SAP/ External Interface " subheader="">
+					<TileContent>
+						<ImageContent src="sap-icon://accounting-document-verification"/>
+					</TileContent>
+				</GenericTile>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="AIF and MDG" subheader="">
+					<TileContent>
+						<ImageContent src="sap-icon://accounting-document-verification"/>
+					</TileContent>
+				</GenericTile>
+			</l:HorizontalLayout>
+		</VBox>
+	</HBox>
 </mvc:View>

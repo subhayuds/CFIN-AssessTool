@@ -2,13 +2,13 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<IconTabBar
 		id="iconTabBarSLT"
-		expanded="{device>/isNoPhone}"
+		expanded="true" expandable="false"
 		class="sapUiResponsiveContentPadding customFilterWrapLevel2 customFilterTextLevel2">
 		<items>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabSLTFindings" text="Introduction" key="intro"/>
+			<IconTabFilter id="iconTabSLTFindings" text="Introduction" key="SLTFindings"/>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabSLTRecommendation" text="Recommendation" key="slt"/>
+			<IconTabFilter id="iconTabSLTRecommendation" text="Recommendation" key="SLTRecommendation"/>
 			<IconTabSeparator icon=""/>
 		</items>
 	</IconTabBar>

@@ -105,10 +105,10 @@
 					]
 				},
 				{
-					"name": "OverviewWhatsNew",
-					"pattern": "OverviewWhatsNew/load:?navLoc:",
+					"name": "OverviewNewInRelease",
+					"pattern": "OverviewNewInRelease/load:?navLoc:",
 					"target": [
-						"TargetOverviewWhatsNew"
+						"TargetOverviewNewInRelease"
 					]
 				},
 				{
@@ -320,19 +320,19 @@
 					"controlId": "iconTabOverviewIntro",
 					"controlAggregation": "content"
 				},
-				"TargetOverviewWhatsNew": {
+				"TargetOverviewNewInRelease": {
 					"viewLevel": 3,
 					"parent": "TargetOverview",
 					"viewPath": "com.hcl.CFIN-Report.view",
-					"viewName": "OverviewIntro",
-					"controlId": "iconTabOverviewWhatsNew",
+					"viewName": "OverviewNewInRelease",
+					"controlId": "iconTabOverviewNewInRelease",
 					"controlAggregation": "content"
 				},
 				"TargetOverviewReportStructure": {
 					"viewLevel": 3,
 					"parent": "TargetOverview",
 					"viewPath": "com.hcl.CFIN-Report.view",
-					"viewName": "OverviewIntro",
+					"viewName": "OverviewReportStructure",
 					"controlId": "iconTabOverviewReportStructure",
 					"controlAggregation": "content"
 				},
@@ -342,7 +342,7 @@
 					"parent": "TargetReportDetails",
 					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewName": "ExSummary",
-					"controlId": "iconTabOverview",
+					"controlId": "iconTabESummary",
 					"controlAggregation": "content"
 				},
 				"TargetExSummaryCFINConnections": {
@@ -360,7 +360,7 @@
 					"parent": "TargetReportDetails",
 					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewName": "SourceSystem",
-					"controlId": "iconTabOverview",
+					"controlId": "iconTabSourceSystem",
 					"controlAggregation": "content"
 				},
 				"TargetSourceSystemFindings": {
@@ -387,7 +387,7 @@
 					"parent": "TargetReportDetails",
 					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewName": "SLT",
-					"controlId": "iconTabOverview",
+					"controlId": "iconTabSLT",
 					"controlAggregation": "content"
 				},
 				"TargetSLTFindings": {
@@ -414,7 +414,7 @@
 					"parent": "TargetReportDetails",
 					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewName": "TargetSystem",
-					"controlId": "iconTabOverview",
+					"controlId": "iconTabTargetSystem",
 					"controlAggregation": "content"
 				},
 				"TargetTargetSystemFindings": {
@@ -441,7 +441,7 @@
 					"parent": "TargetReportDetails",
 					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewName": "AIF",
-					"controlId": "iconTabOverview",
+					"controlId": "iconTabAIF",
 					"controlAggregation": "content"
 				},
 				"TargetAIFFindings": {
@@ -468,7 +468,7 @@
 					"parent": "TargetReportDetails",
 					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewName": "MDG",
-					"controlId": "iconTabOverview",
+					"controlId": "iconTabMDG",
 					"controlAggregation": "content"
 				},
 				"TargetMDGFindings": {
@@ -495,7 +495,7 @@
 					"parent": "TargetReportDetails",
 					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewName": "NonSAP",
-					"controlId": "iconTabOverview",
+					"controlId": "iconTabNonSAP",
 					"controlAggregation": "content"
 				},
 				"TargetNonSAPFindings": {
@@ -522,7 +522,7 @@
 					"parent": "TargetReportDetails",
 					"viewPath": "com.hcl.CFIN-Report.view",
 					"viewName": "WhatsNext",
-					"controlId": "iconTabOverview",
+					"controlId": "iconTabWhatsNext",
 					"controlAggregation": "content"
 				},
 				"TargetWhatsNextOverview": {

@@ -1,15 +1,16 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hcl.CFIN-Report.controller.Overview" xmlns:html="http://www.w3.org/1999/xhtml">
 	<IconTabBar
 		id="iconTabBarOverview"
-		expanded="{device>/isNoPhone}"
+		expanded="true" expandable="false"
+		select="onSelectLevelTwoTab"
 		class="sapUiResponsiveContentPadding customFilterWrapLevel2 customFilterTextLevel2">
 		<items>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabOverviewIntro" text="Introduction" key="intro"/>
+			<IconTabFilter id="iconTabOverviewIntro" text="Introduction" key="OverviewIntro"/>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabOverviewWhatsNew" text="New In Relese 1909" key="whatsNew"/>
+			<IconTabFilter id="iconTabOverviewNewInRelease" text="New In Relese 1909" key="OverviewNewInRelease"/>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabOverviewReportStructure" text="Reprt Structure" key="reportStructure"/>
+			<IconTabFilter id="iconTabOverviewReportStructure" text="Reprt Structure" key="OverviewReportStructure"/>
 			<IconTabSeparator icon=""/>
 		</items>
 	</IconTabBar>

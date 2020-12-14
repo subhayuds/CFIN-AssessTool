@@ -46,91 +46,154 @@ sap.ui.define([
 		//	}
 		
 		_onRouteMatched : function (oEvent) {
-			var oArgs = oEvent.getParameter("arguments");
-			var navLocation = oArgs["?navLoc"];
-			var tabLevelOneKey = navLocation.tabLevelOne;
-			var tabLevelTwoKey = navLocation.tabLevelTwo;
+			// var oArgs = oEvent.getParameter("arguments");
+			// var navLocation = oArgs["?navLoc"];
+			// var tabLevelOneKey = navLocation.tabLevelOne;
+			// var tabLevelTwoKey = navLocation.tabLevelTwo;
 			
-			BaseController._navigateToReportLocation(tabLevelOneKey, tabLevelTwoKey);
+			// BaseController._navigateToReportLocation(tabLevelOneKey, tabLevelTwoKey);
 		},
 		
 		onSelectLevelOneTab: function(oEvent) {
+			var reportDetailsIconTabBar = this.getView().byId("iconTabBarDetails");
 			var selectedTabKey = oEvent.getSource().getSelectedKey();
-			switch(selectedTabKey) {
-				case "overview":
+			var iconTabBarKeysArray = this._getIconTabBarKeys(reportDetailsIconTabBar);
+			var selectedKeyIndex = iconTabBarKeysArray.indexOf(selectedTabKey,0);
+			if(selectedKeyIndex === 0) {
+				this.getView().byId("btnPrevious").setVisible(false);
+				this.getView().byId("btnNext").setVisible(true);
+			} else if(selectedKeyIndex === iconTabBarKeysArray.length - 1) {
+				this.getView().byId("btnPrevious").setVisible(true);
+				this.getView().byId("btnNext").setVisible(false);
+			} else {
+				this.getView().byId("btnPrevious").setVisible(true);
+				this.getView().byId("btnNext").setVisible(true);
+			}
+			
+			this._navigateToTab(selectedTabKey);
+		},
+		
+		_navigateToTab: function(tabKey) {
+			switch(tabKey) {
+				case "Overview":
 					this._oRouter.navTo("OverviewIntro",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
-				case "exSummary":
-					this._oRouter.navTo("OverviewIntro",{
+				case "ExSummary":
+					this._oRouter.navTo("ExSummaryCFINConnections",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
-				case "sourceSystem":
-					this._oRouter.navTo("OverviewIntro",{
+				case "SourceSystem":
+					this._oRouter.navTo("SourceSystemFindings",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
-				case "slt":
-					this._oRouter.navTo("OverviewIntro",{
+				case "SLT":
+					this._oRouter.navTo("SLTFindings",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
-				case "targetSystem":
-					this._oRouter.navTo("OverviewIntro",{
+				case "TargetSystem":
+					this._oRouter.navTo("TargetSystemFindings",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
-				case "aif":
-					this._oRouter.navTo("OverviewIntro",{
+				case "AIF":
+					this._oRouter.navTo("AIFFindings",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
-				case "mdg":
-					this._oRouter.navTo("OverviewIntro",{
+				case "MDG":
+					this._oRouter.navTo("MDGFindings",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
-				case "external":
-					this._oRouter.navTo("OverviewIntro",{
+				case "NonSAP":
+					this._oRouter.navTo("NonSAPFindings",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
-				case "whatNext":
-					this._oRouter.navTo("OverviewIntro",{
+				case "WhatsNext":
+					this._oRouter.navTo("WhatsNextOverview",{
 						"?navLoc": {
-							tabLevelOne: selectedTabKey,
+							tabLevelOne: tabKey,
 							tabLevelTwo: "intro"
 						}
 					}, true);
 					break;
 			}
+		},
+		
+		onPressPreviousTab: function(oEvent) {
+			var reportDetailsIconTabBar = this.getView().byId("iconTabBarDetails");
+			var selectedTabKey = reportDetailsIconTabBar.getSelectedKey();
+			var iconTabBarKeysArray = this._getIconTabBarKeys(reportDetailsIconTabBar);
+			var selectedKeyIndex = iconTabBarKeysArray.indexOf(selectedTabKey,0);
+			
+			if(selectedKeyIndex === 0) {
+				oEvent.getSource().setVisible(false);
+			} else if(selectedKeyIndex === iconTabBarKeysArray.length - 1) {
+				this.getView().byId("btnPrevious").setVisible(false);
+			} else {
+				reportDetailsIconTabBar.setSelectedKey(iconTabBarKeysArray[selectedKeyIndex - 1]);
+			}
+		},
+		
+		onPressNextTab: function(oEvent) {
+			var reportDetailsIconTabBar = this.getView().byId("iconTabBarDetails");
+			var selectedTabKey = reportDetailsIconTabBar.getSelectedKey();
+			var iconTabBarKeysArray = this._getIconTabBarKeys(reportDetailsIconTabBar);
+			var selectedKeyIndex = iconTabBarKeysArray.indexOf(selectedTabKey,0);
+			if(selectedKeyIndex === 0) {
+				this.getView().byId("btnPrevious").setVisible(false);
+			} else if(selectedKeyIndex === iconTabBarKeysArray.length - 1) {
+				oEvent.getSource().setVisible(false);
+			} else {
+				reportDetailsIconTabBar.setSelectedKey(iconTabBarKeysArray[selectedKeyIndex + 1]);
+			}
+			
+			this._oRouter.navTo(selectedTabKey,{
+				"?navLoc": {
+					tabLevelOne: selectedTabKey,
+					tabLevelTwo: "Dummy"
+				}
+			}, true);
+		},
+		
+		_getIconTabBarKeys: function(iconTabBarRef) {
+			var iconTabBarKeysArray = [];
+			var tabBarItemsCount = iconTabBarRef.getItems().length;
+			
+			for (var i=0;i<tabBarItemsCount;i=i+2) {
+				iconTabBarKeysArray.push(iconTabBarRef.getItems()[i].getKey());
+			}
+			return iconTabBarKeysArray;
 		}
 	});
-
 });
