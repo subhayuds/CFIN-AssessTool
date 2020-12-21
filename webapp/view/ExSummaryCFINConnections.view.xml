@@ -1,45 +1,70 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid" xmlns:l="sap.ui.layout"
-	controllerName="com.hcl.CFIN-Report.controller.ExSummaryCFINConnections" xmlns:html="http://www.w3.org/1999/xhtml">
-	<HBox width="100%" height="100%">
-		<VBox width="15%" height="100%" class="vborder" alignContent="Center" alignItems="Center">
-			<l:HorizontalLayout class="sapUiTinyMargin" allowWrapping="true">
-				<Text
-					text="HCL SAP CFIN Upgrade Assessment tool helps you to achieve your business goals. This report provides you insights and tailored SAP S/4HANA CFIN upgrade recommendations. Click one of these tiles on the right to discover how you can benefit from using HCL CFIN upgrade Assessment tool. "/>
-			</l:HorizontalLayout>
-		</VBox>
-		<VBox class="vborder" width="85%" height="100%">
-			<l:HorizontalLayout allowWrapping="true">
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Source System" subheader="">
-					<TileContent>
-						<ImageContent src="sap-icon://accounting-document-verification"/>
-					</TileContent>
-				</GenericTile>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Target S/4HANA CFIN System " subheader="" press="press">
-					<TileContent >
-						<ImageContent src="sap-icon://accounting-document-verification"/>
-					</TileContent>
-				</GenericTile>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="SLT System" subheader="">
-					<TileContent>
-						<ImageContent src="sap-icon://accounting-document-verification"/>
-					</TileContent>
-				</GenericTile>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="S/4HANA Finance" subheader="" press="press">
-					<TileContent >
-						<ImageContent src="sap-icon://accounting-document-verification"/>
-					</TileContent>
-				</GenericTile>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Non-SAP/ External Interface " subheader="">
-					<TileContent>
-						<ImageContent src="sap-icon://accounting-document-verification"/>
-					</TileContent>
-				</GenericTile>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="AIF and MDG" subheader="">
-					<TileContent>
-						<ImageContent src="sap-icon://accounting-document-verification"/>
-					</TileContent>
-				</GenericTile>
-			</l:HorizontalLayout>
-		</VBox>
-	</HBox>
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid" 
+	xmlns:l="sap.ui.layout" controllerName="com.hcl.CFIN-Report.controller.ExSummaryCFINConnections" xmlns:html="http://www.w3.org/1999/xhtml">
+	<VBox class="vborder" width="100%">
+		<Text textAlign="Center" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginBottom fontSize14 colorNavy"
+				text="HCL SAP CFIN Upgrade Assessment tool helps you to achieve your business goals. This report provides you insights and tailored SAP S/4HANA CFIN upgrade recommendations. Click one of these tiles on the right to discover how you can benefit from using HCL CFIN upgrade Assessment tool. "/>
+		
+		<grid:CSSGrid gridTemplateColumns="1fr 1fr 1fr" gridGap="2rem" width="100%">
+			<VBox width="100%" class="vboxTile">
+				<HBox height="10rem" width="100%">
+					<HBox width="100%">
+						<Link text="Source System" press="handleLinkPress" class="vboxTileTitle" wrapping="true"/>
+					</HBox>
+				</HBox>
+				<VBox width="100%" height="5rem" alignContent="End" alignItems="End" class="vboxFooter">
+					<ImageContent src="sap-icon://accounting-document-verification"/>
+				</VBox>
+			</VBox>
+			<VBox class="vboxTile">
+				<HBox height="10rem" width="100%">
+					<HBox width="100%">
+						<Link text="Target S/4HANA CFIN System" press="handleLinkPress" class="vboxTileTitle" wrapping="true"/>
+					</HBox>
+				</HBox>
+				<VBox width="100%" height="5rem" alignContent="End" alignItems="End" class="vboxFooter">
+					<ImageContent src="sap-icon://accounting-document-verification"/>
+				</VBox>
+			</VBox>
+			<VBox class="vboxTile">
+				<HBox height="10rem" width="100%">
+					<HBox width="100%">
+						<Link text="SLT System" press="handleLinkPress" class="vboxTileTitle" wrapping="true"/>
+					</HBox>
+				</HBox>
+				<VBox width="100%" height="5rem" alignContent="End" alignItems="End" class="vboxFooter">
+					<ImageContent src="sap-icon://accounting-document-verification"/>
+				</VBox>
+			</VBox>
+			<VBox class="vboxTile">
+				<HBox height="10rem" width="100%">
+					<HBox width="100%">
+						<Link text="S/4HANA Finance" press="handleLinkPress" class="vboxTileTitle" wrapping="true"/>
+					</HBox>
+				</HBox>
+				<VBox width="100%" height="5rem" alignContent="End" alignItems="End" class="vboxFooter">
+					<ImageContent src="sap-icon://accounting-document-verification"/>
+				</VBox>
+			</VBox>
+			<VBox class="vboxTile">
+				<HBox height="10rem" width="100%">
+					<HBox width="100%">
+						<Link text="Non-SAP/ External Interface" press="handleLinkPress" class="vboxTileTitle" wrapping="true"/>
+					</HBox>
+				</HBox>
+				<VBox width="100%" height="5rem" alignContent="End" alignItems="End" class="vboxFooter">
+					<ImageContent src="sap-icon://accounting-document-verification"/>
+				</VBox>
+			</VBox>
+			<VBox class="vboxTile">
+				<HBox height="10rem" width="100%">
+					<HBox width="100%">
+						<Link text="AIF &amp; MDG" press="handleLinkPress" class="vboxTileTitle" wrapping="true"/>
+					</HBox>
+				</HBox>
+				<VBox width="100%" height="5rem" alignContent="End" alignItems="End" class="vboxFooter">
+					<ImageContent src="sap-icon://accounting-document-verification"/>
+				</VBox>
+			</VBox>
+		</grid:CSSGrid>
+	</VBox>
 </mvc:View>

@@ -1,25 +1,48 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hcl.CFIN-Report.controller.OverviewIntro" xmlns:html="http://www.w3.org/1999/xhtml">
-	<VBox class="sapUiSmallMarginTop sapUiSmallMarginBottom">
-		<Text
-			wrappingType="Hyphenated"
-			text="This report will help you to receive:"/>
-		<Text
-			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-			text="1) Insights on your current SAP landscape and industry trends"/>
-		<Text
-			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-			text="2) Relevant SAP S/4HANA 1909 business scenarios by line of business"/>
-		<Text
-			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-			text="3) Tailored guidance and recommendations to realize the value from SAP S/4HANA"/>
-		<Text
-			wrappingType="Hyphenated" class="sapUiMediumMarginTop"
-			text="What we know about XXXXX (Client  Name):"/>
-		<Text
-			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-			text="1) We analyzed business process performance and usage data provided from your SAP ERP, Non SAP, SLT and Central Finance system"/> 
-		<Text
-			wrappingType="Hyphenated" class="sapUiTinyMarginTop"
-			text="2) XXXX no of central finance Functionalities enabled in the system in order to get data replicated"/>
-	</VBox>
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid" xmlns:f="sap.f" controllerName="com.hcl.CFIN-Report.controller.OverviewIntro" xmlns:html="http://www.w3.org/1999/xhtml">
+	<grid:CSSGrid gridTemplateColumns="1fr 1fr 1fr" gridGap="1rem">
+		<f:Card>
+			<f:layoutData>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="4"/>
+			</f:layoutData>
+			<f:content>
+				<HBox height="100%" alignItems="Center">
+					<VBox class="sapUiTinyMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom">
+						<Text textAlign="Begin" wrapping="true" wrappingType="Hyphenated" 
+							text="This report will help you to receive:"/>
+						<Text textAlign="Begin" wrapping="true" wrappingType="Hyphenated"  class="sapUiTinyMarginTop"
+							text="1) Insights on your current SAP landscape and industry trends"/>
+						<Text textAlign="Begin" wrapping="true" wrappingType="Hyphenated"  class="sapUiTinyMarginTop"
+							text="2) Relevant SAP S/4HANA 1909 business scenarios by line of business"/>
+						<Text textAlign="Begin" wrapping="true" wrappingType="Hyphenated"  class="sapUiTinyMarginTop"
+							text="3) Tailored guidance and recommendations to realize the value from SAP S/4HANA"/>
+					</VBox>
+				</HBox>
+			</f:content>
+		</f:Card>
+		<f:Card>
+			<f:layoutData>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="4"/>
+			</f:layoutData>
+			<f:content>
+				<Image src="mime/CFinOverview.JPG" height="300px" class="sapUiTinyMargin"/>
+			</f:content>
+		</f:Card>
+		<f:Card>
+			<f:layoutData>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="4"/>
+			</f:layoutData>
+			<f:content>
+				<HBox height="100%" alignItems="Center">
+					<VBox class="sapUiTinyMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom">
+						<Text textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiMediumMarginTop"
+							text="What we know about XXXXX (Client  Name):"/>
+						<Text textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop"
+							text="1) We analyzed business process performance and usage data provided from your SAP ERP, Non SAP, SLT and Central Finance system"/> 
+						<Text textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop"
+							text="2) XXXX no of central finance Functionalities enabled in the system in order to get data replicated"/>
+					</VBox>
+				</HBox>
+			</f:content>
+		</f:Card>
+	</grid:CSSGrid>
 </mvc:View>

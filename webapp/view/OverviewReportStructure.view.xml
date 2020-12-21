@@ -1,74 +1,119 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid" 
-	xmlns:l="sap.ui.layout" xmlns:f="sap.f"	xmlns:cards="sap.f.cards"
-	controllerName="com.hcl.CFIN-Report.controller.OverviewReportStructure" xmlns:html="http://www.w3.org/1999/xhtml">
-	<VBox alignItems="Center">
-		<grid:CSSGrid gridTemplateColumns="1fr 1fr 1fr 1fr" gridGap="0rem">
-			<VBox>
-				<Image src="mime/oArrow.png" class="orBox"/>
-				<Text text="Overview" class="sapUiTinyMarginBottom bldStlBl"/>
-				<Text text="Report introduction" class="sapUiTinyMarginBottom "/>
-			</VBox>
-			<VBox>
-				<Image src="mime/gArrow.png" class="orBox"/>
-				<Text text="Executive Summary" class="sapUiTinyMarginBottom bldStlBl"/>
-				<Text text="What we measured " class="sapUiTinyMarginBottom "/>
-			</VBox>
-			<VBox>
-				<Image src="mime/bArrow.png" class="blBox"/>
-				<Text text="Findings and Recommendations " class="sapUiTinyMarginBottom bldStlBl"/>
-				<Text text="What we measured " class="sapUiTinyMarginBottom "/>
-			</VBox>
-			<VBox>
-				<Image src="mime/grArrow.png" class="grBox"/>
-				<Text text="Next Steps " class="sapUiTinyMarginBottom bldStlBl"/>
-				<Text text="Relevant support offerings and services which help you to upgrade to desired level/ version " class="sapUiTinyMarginBottom"/>
-			</VBox>
-		</grid:CSSGrid>
-		<HBox class="sapUiSmallMarginBottom">
-			<Button type="Success" text="Source System" class="btnMrgn" width="135px"/>
-			<Button type="Success" text="Target System" class="btnMrgn" width="135px"/>
-			<Button type="Success" text="SLT" class="btnMrgn" width="135px"/>
-		</HBox>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:commons="sap.suite.ui.commons" xmlns:grid="sap.ui.layout.cssgrid" xmlns:l="sap.ui.layout" 
+	xmlns:f="sap.f" xmlns:cards="sap.f.cards" controllerName="com.hcl.CFIN-Report.controller.OverviewReportStructure">
+	<VBox alignItems="Center" width="100%">
+		<commons:ProcessFlow id="processflow1" lanes="{/lanes}">
+			<commons:lanes>
+				<commons:ProcessFlowLaneHeader laneId="{id}" iconSrc="{icon}" text="{label}" position="{position}" state="{state}"/>
+			</commons:lanes>
+		</commons:ProcessFlow>
+	</VBox>
+	<VBox alignItems="Center" class="sapUiTinyMarginBottom">
+		<HBox>
+			<Button text="Source System" width="135px" class="sapUiTinyMarginEnd greenButton"/>
+			<Button text="Target System" width="135px" class="sapUiTinyMarginEnd greenButton"/>
+			<Button text="SLT" width="135px" class="greenButton"/>
+		</HBox>	
+	</VBox>
+	
+	<grid:CSSGrid gridTemplateColumns="1fr 1fr 1fr" gridGap="1rem" class="sapUiTinyMarginTop sapUiTinyMarginBottom">
 		<f:Card>
 			<f:layoutData>
-				<grid:ResponsiveColumnItemLayoutData columns="1" rows="4"/>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="1"/>
 			</f:layoutData>
 			<f:content>
-				<grid:CSSGrid gridTemplateColumns="1fr 1fr 1fr" gridGap="0rem" width="900px">
-					<VBox alignItems="Center" class="sapUiTinyMarginTop">
-						<ImageContent src="sap-icon://functional-location" class="imgCnt"/>
-						<Text text="Introduction" class="sapUiTinyMarginBottom bldStlBl"/>
-						<List>
-							<items>
-								<StandardListItem wrapping="true" title=" &#8226; Overview about key value drivers "/>
-							</items>
-						</List>
+				<VBox alignItems="Start" class="sapUiTinyMargin" width="100%">
+					<VBox alignItems="Center" width="100%">
+						<HBox class="sapUiTinyMarginBottom">
+							<core:Icon src="sap-icon://functional-location" class="fontSize30 colorNavy">
+								<core:layoutData>
+									<FlexItemData growFactor="0" />
+								</core:layoutData>
+							</core:Icon>
+							<Text text="Introduction" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginBottom colorNavy boldText"/>
+						</HBox>
 					</VBox>
-					<VBox alignItems="Center" class="sapUiTinyMarginTop">
-						<ImageContent src="sap-icon://search" class="imgCnt" />
-						<Text text="Findings " class="sapUiTinyMarginBottom bldStlBl"/>
-						<List>
-							<items>
-								<StandardListItem wrapping="true" title=" &#8226; Overview of measured business key figures and functionalities "/>
-								<StandardListItem wrapping="true" title=" &#8226; Relevant SAP S/4HANA innovations highlighted "/>
-								<StandardListItem wrapping="true" title=" &#8226; Details and explanations about each findings "/>
-							</items>
-						</List>
-					</VBox>
-					<VBox alignItems="Center" class="sapUiTinyMarginTop">
-						<ImageContent src="sap-icon://lightbulb" class="imgCnt" />
-						<Text text="Recommendations and Recommendations " class="sapUiTinyMarginBottom bldStlBl"/>
-						<List>
-							<items>
-								<StandardListItem wrapping="true"
-									title=" &#8226; SAP best practice innovation recommendations including industry popularity and your current process coverage "/>
-								<StandardListItem wrapping="true" title=" &#8226; Relevant SAP S/4HANA innovations highlighted "/>
-								<StandardListItem wrapping="true" title=" &#8226; Learn about what’s new in each recommended business scenario "/>
-							</items>
-						</List>
-					</VBox>
-				</grid:CSSGrid>
+					<List width="100%">
+						<items>
+							<CustomListItem>
+								<Text text="&#8226; Overview about key value drivers" 
+									textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+							</CustomListItem>
+						</items>
+					</List>
+				</VBox>
 			</f:content>
 		</f:Card>
-	</VBox>
+		<f:Card>
+			<f:layoutData>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="1"/>
+			</f:layoutData>
+			<f:content>
+				<VBox alignItems="Start" class="sapUiTinyMargin" width="100%">
+					<VBox alignItems="Center" width="100%">
+						<HBox class="sapUiTinyMarginBottom">
+							<core:Icon src="sap-icon://search" class="fontSize30 colorNavy">
+								<core:layoutData>
+									<FlexItemData growFactor="0" />
+								</core:layoutData>
+							</core:Icon>
+							<Text text="Findings" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginBottom colorNavy boldText"/>
+						</HBox>
+					</VBox>
+					
+					<List width="100%">
+						<items>
+							<CustomListItem>
+								<Text text="&#8226; Overview of measured business key figures and functionalities&#xA;&#xA;" 
+									textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+							</CustomListItem>
+							<CustomListItem>
+								<Text text="&#8226; Relevant SAP S/4HANA innovations highlighted" 
+									textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+							</CustomListItem>
+							<CustomListItem>
+								<Text text="&#8226; Details and explanations about each findings" 
+									textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+							</CustomListItem>
+						</items>
+					</List>
+				</VBox>
+			</f:content>
+		</f:Card>
+		<f:Card>
+			<f:layoutData>
+				<grid:ResponsiveColumnItemLayoutData columns="1" rows="1"/>
+			</f:layoutData>
+			<f:content>
+				<VBox alignItems="Start" class="sapUiTinyMargin" width="100%">
+					<VBox alignItems="Center" width="100%">
+						<HBox class="sapUiTinyMarginBottom">
+							<core:Icon src="sap-icon://lightbulb" class="fontSize30 colorNavy">
+								<core:layoutData>
+									<FlexItemData growFactor="0" />
+								</core:layoutData>
+							</core:Icon>
+							<Text text="Recommendations" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginBottom colorNavy boldText"/>
+						</HBox>
+					</VBox>
+		
+					<List width="100%">
+						<items>
+							<CustomListItem>
+								<Text text="&#8226; SAP best practice innovation recommendations including industry popularity and your current process coverage" 
+									textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+							</CustomListItem>
+							<CustomListItem>
+								<Text text="&#8226; Relevant SAP S/4HANA innovations highlighted" 
+									textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+							</CustomListItem>
+							<CustomListItem>
+								<Text text="&#8226; Learn about what’s new in each recommended business scenario" 
+									textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+							</CustomListItem>
+						</items>
+					</List>
+				</VBox>
+			</f:content>
+		</f:Card>
+	</grid:CSSGrid>
 </mvc:View>

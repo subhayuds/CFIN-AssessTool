@@ -9,18 +9,25 @@
 			<f:content>
 				<l:VerticalLayout class="sapUiSmallMargin sapUiTinyMarginEnd">
 					<VBox alignItems="Center">
-						<Image src="mime/img1.JPG"/>
-						<Text text="Manufacturing:" class="sapUiTinyMarginBottom bldStl"/>
-						<Text text="New Predictive Material and Resource Planning " class="sapUiTinyMarginBottom bldStl"/>
+						<Image src="mime/img1.JPG" height="100px" class="sapUiTinyMarginBottom"/>
+						<Text text="Manufacturing" class="sapUiTinyMarginBottom fontSize14 boldText undelineText"/>
+						<Text text="New Predictive Material and Resource Planning&#xA;&#xA;" textAlign="Center" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginBottom fontSize14 boldText"/>
 					</VBox>
 					<VBox>
 						<List>
 							<items>
-								<StandardListItem wrapping="true"
-									title=" &#8226; Reduces inventory carrying costs by forecasting component demand with predictive material and resource planning"/>
-								<StandardListItem wrapping="true"
-									title="&#8226; Supports interactive planning with simulations, considers top-level demands (e.g. product forecast), derives component and capacity demands"/>
-								<StandardListItem wrapping="true" title="&#8226; Lower inventory due to appropriately sized buffers"/>
+								<CustomListItem>
+									<Text text="&#8226; Reduces inventory carrying costs by forecasting component demand with predictive material and resource planning" 
+										textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+								</CustomListItem>
+								<CustomListItem>
+									<Text text="&#8226; Supports interactive planning with simulations, considers top-level demands (e.g. product forecast), derives component and capacity demands" 
+										textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+								</CustomListItem>
+								<CustomListItem>
+									<Text text="&#8226; Lower inventory due to appropriately sized buffers" 
+										textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+								</CustomListItem>
 							</items>
 						</List>
 					</VBox>
@@ -34,19 +41,25 @@
 			<f:content>
 				<l:VerticalLayout class="sapUiSmallMargin sapUiTinyMarginEnd">
 					<VBox alignItems="Center">
-						<Image src="mime/img2.JPG"/>
-						<Text text="Sourcing and Procurement:" class="sapUiTinyMarginBottom bldStl"/>
-						<Text text="Delivery Time Prediction " class="sapUiTinyMarginBottom bldStl"/>
+						<Image src="mime/img2.JPG" height="100px" class="sapUiTinyMarginBottom"/>
+						<Text text="Sourcing and Procurement" class="sapUiTinyMarginBottom fontSize14 boldText undelineText"/>
+						<Text text="Delivery Time Prediction&#xA;&#xA;" textAlign="Center" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginBottom fontSize14 boldText"/>
 					</VBox>
 					<VBox>
 						<List>
 							<items>
-								<StandardListItem wrapping="true"
-									title=" &#8226; Predicts delivery dates of raw materials and classifies the shipments into different categories"/>
-								<StandardListItem wrapping="true"
-									title="&#8226; Enables you to react to potential material shortages proactively and to avoid production rescheduling"/>
-								<StandardListItem wrapping="true"
-									title="&#8226; With machine learning, driving up planning and delivery reliability, while decreasing manual monitoring effort"/>
+								<CustomListItem>
+									<Text text="&#8226; Predicts delivery dates of raw materials and classifies the shipments into different categories&#xA;&#xA;" 
+										textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+								</CustomListItem>
+								<CustomListItem>
+									<Text text="&#8226; Enables you to react to potential material shortages proactively and to avoid production rescheduling&#xA;&#xA;" 
+										textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+								</CustomListItem>
+								<CustomListItem>
+									<Text text="&#8226; With machine learning, driving up planning and delivery reliability, while decreasing manual monitoring effort" 
+										textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+								</CustomListItem>
 							</items>
 						</List>
 					</VBox>
@@ -60,17 +73,21 @@
 			<f:content>
 				<l:VerticalLayout class="sapUiSmallMargin sapUiTinyMarginEnd">
 					<VBox alignItems="Center">
-						<Image src="mime/img3.JPG"/>
-						<Text text="Finance:" class="sapUiTinyMarginBottom bldStl"/>
-						<Text text="Intercompany Reconciliation and Matrix Consolidation in Group Reporting " class="sapUiTinyMarginBottom bldStl"/>
+						<Image src="mime/img3.JPG" height="100px" class="sapUiTinyMarginBottom"/>
+						<Text text="Finance" class="sapUiTinyMarginBottom fontSize14 boldText undelineText"/>
+						<Text text="Intercompany Reconciliation and Matrix Consolidation in Group Reporting" textAlign="Center" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginBottom fontSize14 boldText"/>
 					</VBox>
 					<VBox>
 						<List>
 							<items>
-								<StandardListItem wrapping="true"
-									title=" &#8226; Consolidated finance reporting using new matrix consolidation enables simplified consolidation capabilities"/>
-								<StandardListItem wrapping="true"
-									title="&#8226; Evaluates consolidation perspectives individually or combined in matrix reports, and provides enhanced analysis of group consolidations"/>
+								<CustomListItem>
+									<Text text="&#8226; Consolidated finance reporting using new matrix consolidation enables simplified consolidation capabilities" 
+										textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+								</CustomListItem>
+								<CustomListItem>
+									<Text text="&#8226; Evaluates consolidation perspectives individually or combined in matrix reports, and provides enhanced analysis of group consolidations" 
+										textAlign="Begin" wrapping="true" wrappingType="Hyphenated" class="sapUiTinyMarginTop sapUiTinyMarginBottom justifyText fontSize14"/>
+								</CustomListItem>
 							</items>
 						</List>
 					</VBox>

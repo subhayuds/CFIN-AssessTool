@@ -10,7 +10,7 @@
 			<IconTabSeparator icon=""/>
 			<IconTabFilter id="iconTabOverviewNewInRelease" text="New In Relese 1909" key="OverviewNewInRelease"/>
 			<IconTabSeparator icon=""/>
-			<IconTabFilter id="iconTabOverviewReportStructure" text="Reprt Structure" key="OverviewReportStructure"/>
+			<IconTabFilter id="iconTabOverviewReportStructure" text="Report Structure" key="OverviewReportStructure"/>
 			<IconTabSeparator icon=""/>
 		</items>
 	</IconTabBar>

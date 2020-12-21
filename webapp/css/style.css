@@ -63,46 +63,52 @@
 }
 /*** Report Details Page Style - END ***/
 
-/*** Mriganka Style - START ***/
-.bldStl{
+/*** Generic Style - START ***/
+.fontSize14 {
+	font-size: 14px;	
+}
+
+.fontSize30 {
+	font-size: 30px;	
+}
+
+.colorNavy {
+	color: NAVY;
+}
+
+.boldText {
 	font-weight: bold;
 }
-.bulletlist {
-    display: list-item;
-    list-style-type: disc;
-    list-style-position: outside;
-    margin-left: 20px;
+
+.undelineText {
+	text-decoration: underline;
 }
 
-.vborder {
-	border: 0px solid black;
+.justifyText {
+	text-align: justify;
 }
 
-.blBox{
-	height: 80px;
-	width: 400px;
+.greenButton>.sapMBtnInner {
+    background-color: green;
+    background-image: none;
+    text-shadow: none;
+    color: #fff;
 }
 
-.grBox{
-	height: 80px;
-	width: 300px;
+.vboxTile {
+    border: 1px solid NAVY;
+    border-radius: 0.25rem;
 }
 
-.orBox{
-	height: 80px;
-	width: 200px;
+.vboxTileTitle {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
-.btnMrgn{
-	margin: 2px;
+.vboxFooter {
+    background-color: #FFC000;
+    padding: 1rem;
 }
-
-.bldStlBl{
-	font-weight: bold;
-	color: blue;
-}
-
-.imgCnt{
-	width: 1rem !important;
-}
-/*** Mriganka Style - START ***/
+/*** Generic Style - END ***/

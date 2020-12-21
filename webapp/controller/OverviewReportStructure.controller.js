@@ -11,8 +11,13 @@ sap.ui.define([
 		 * @memberOf com.hcl.CFIN-Report.view.OverviewReportStructure
 		 */
 		onInit: function () {
+			var oView = this.getView();
+			this.oProcessFlow1 = oView.byId("processflow1");
+			var dataModel = new sap.ui.model.json.JSONModel("model/ProcessFlow.json");
+			oView.setModel(dataModel);
 
-		},
+			dataModel.attachRequestCompleted(this.oProcessFlow1.updateModel.bind(this.oProcessFlow1));
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
